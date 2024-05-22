@@ -1,0 +1,43 @@
+Medicamento implements Comparable<Medicamento>
+-codigo: int
+-nombre: String
+-descripcion: String
+-precio: double
+-posologia: String
+
++Medicamento(codigo)
++Medicamento(codigo, nombre, descripcion)
++Medicamento(codigo, nombre, descripcion, precio, posologia)
+
++getCodigo(): int
++getNombre(): String
++getDescripcion(): String
++getPrecio(): double
++getPosologia(): String
+
++setPrecio(double precio)
++setPosologia(String posologia)
+
++toString(): String
+
++equals(Object p): boolean
++compareTo(Medicamento med): int
+
+-----------------------------------------
+TratamientoFicheros (mejor hazlo lo último)
+
+public static final String NOMBRE_FICHERO
+
++ static leeFichero(): Set
++ static escribeFichero(Set<Medicamento> listaMedicamentos)
+
+----------------------------------------
+
+ClaseCRUD
+
+public static TreeSet listaMedicamentos
+
++ static inicializa()   (si lo pide)
++ static addMedicamento(Medicamento med): boolean
++ static listarMedicamentos()
++ static eliminarMedicamento(Medicamento med): boolean 
