@@ -28,7 +28,7 @@ TratamientoFicheros (mejor hazlo lo último)
 
 public static final String NOMBRE_FICHERO
 
-+ static leeFichero(): Set
++ static leeFichero(): Set<Medicamento>
 + static escribeFichero(Set<Medicamento> listaMedicamentos)
 
 ----------------------------------------

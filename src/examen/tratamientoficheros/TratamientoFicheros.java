@@ -60,8 +60,7 @@ public class TratamientoFicheros {
 
 	public static void escribeFichero(Set<Medicamento> listaMedicamentos) {
 		BufferedWriter bw = null;
-		
-		
+			
 		try {
 			bw = new BufferedWriter(new FileWriter(RUTA_FICHERO));
 			
@@ -84,7 +83,6 @@ public class TratamientoFicheros {
 				bw.flush();
 				bw.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				System.out.println(e);
 			}
 			
