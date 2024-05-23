@@ -67,7 +67,7 @@ public class Medicamento implements Comparable<Medicamento> {
 	@Override
 	public String toString() {
 		String cadena = "";
-		cadena += "Codigo: " + this.codigo + "\n";
+		cadena += "Código: " + this.codigo + "\n";
 		cadena += "Nombre: " + this.nombre + "\n";
 		cadena += "Descripción: " + this.descripcion + "\n";
 		cadena += "Precio: " + this.precio + "\n";

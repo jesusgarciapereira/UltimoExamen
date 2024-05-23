@@ -43,19 +43,25 @@ public class ClaseCRUD {
 
 	}
 
-	// No sé
 	public static boolean modificarMedicamento(Medicamento med, double nuevoPrecio, String nuevaPosologia) {
-
+		
 		boolean resultado = false;
 
-		if (listaMedicamentos.contains(med)) {
-			for (Medicamento valor : listaMedicamentos) {
-				if (valor.equals(med)) {
-					
-					resultado = true;
-				}
-			}
-		}
-		return resultado;
-	}
+        if (listaMedicamentos.contains(med)) {
+            for (Medicamento valor : listaMedicamentos) {
+                if (valor.equals(med)) {
+                    if (nuevoPrecio != 0) {
+                        valor.setPrecio(nuevoPrecio);
+                        resultado = true;
+                    } else if (nuevaPosologia != null) {
+                        valor.setPosologia(nuevaPosologia);
+                        resultado = true;
+                    }
+                }
+            }
+        }
+        
+        return resultado;
+
+    }
 }
