@@ -23,6 +23,7 @@ public class MedicamentoMain {
 		Medicamento med;
 
 		System.out.println("Bienvenido al sistema gestor de medicamentos");
+		
 		try {
 			ClaseCRUD.inicializa();
 
@@ -73,15 +74,15 @@ public class MedicamentoMain {
 					break;
 
 				case 4:
-					String modificar = "";
+					String opcionModificar = "";
 
-					System.out.println("Inserte el codigo del medicamento a modificar");
+					System.out.println("Inserte el código del medicamento a modificar");
 					codigo = sc.nextInt();
 					sc.nextLine();
 
 					med = new Medicamento(codigo);
 
-					modPrecioOPos(sc, modificar, med);
+					modPrecioOPos(sc, opcionModificar, med);
 					break;
 
 				case 5:
@@ -107,24 +108,24 @@ public class MedicamentoMain {
 		}
 	}
 
-	private static void modPrecioOPos(Scanner sc, String modificar, Medicamento med) {
+	private static void modPrecioOPos(Scanner sc, String opcionModificar, Medicamento med) {
 
 		
 		if (ClaseCRUD.listaMedicamentos.contains(med)) {
 			System.out.println("¿Que quieres modificar?");
 			System.out.println("\t [Precio]\t [Posologia]");
-			modificar = sc.nextLine();
+			opcionModificar = sc.nextLine();
 		}
 		
-		if (modificar.equalsIgnoreCase("precio")) {
-			System.out.println("Inserte el precio");
+		if (opcionModificar.equalsIgnoreCase("precio")) {
+			System.out.println("Inserte el nuevo precio");
 			med.setPrecio(sc.nextDouble());
 			sc.nextLine();
 			if (ClaseCRUD.modificarMedicamento(med, med.getPrecio(), null)) {
 				System.out.println("Se ha llevado a cabo la modificación del precio");
 			}
-		} else if (modificar.equalsIgnoreCase("posologia")) {
-			System.out.println("Inserte la posologia");
+		} else if (opcionModificar.equalsIgnoreCase("posologia")) {
+			System.out.println("Inserte la nueva posología");
 			med.setPosologia(sc.nextLine());
 			if (ClaseCRUD.modificarMedicamento(med, 0, med.getPosologia())) {
 				System.out.println("Se ha llevado a cabo la modificación de la posología");
