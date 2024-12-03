@@ -34,7 +34,7 @@ public class MedicamentoMain {
 
 				switch (opcion) {
 				case 1:
-					System.out.println("Introduzca códigos");
+					System.out.println("Introduzca código");
 					codigo = sc.nextInt();
 					sc.nextLine();
 					System.out.println("Introduzca nombre");
